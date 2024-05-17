@@ -15,6 +15,12 @@ public class Computador {
     private Memoria memoria;
     private double costoComputador;
 
+    public Computador(String m, Memoria mem, Procesador pro) {
+        marca = m;
+        memoria = mem;
+        procesador = pro;
+    }
+
     public void establecerMarca(String x) {
         marca = x;
     }
@@ -28,19 +34,34 @@ public class Computador {
 
     }
 
-    public void establecercostoComputadora(String x) {
-    costoComputador = memoria.obtenerCosto() + procesador.obtenerCosto();
+    public void establecercostoComputadora() {
+        costoComputador = memoria.obtenerCosto() + procesador.obtenerCosto();
     }
-    public String obtenermarca(){
+
+    public String obtenermarca() {
         return marca;
     }
-    public Procesador obtenerProcesador(){
+
+    public Procesador obtenerProcesador() {
         return procesador;
     }
-    public Memoria obtnerMemoria(){
+
+    public Memoria obtnerMemoria() {
         return memoria;
     }
-    public double obtenerCostoComputadora(){
+
+    public double obtenerCostoComputadora() {
         return costoComputador;
+    }
+      public String toString() {
+        String cadena = String.format("Marca Computadora: %s\n"
+                + "Marca Memoria: %s\nMarca Procesador: %s\nCosto Memoria: %.2f"
+                + "\nCosto Procesador: %.2f\nCosto Computador: %.2f\n"
+                ,obtenermarca(),obtnerMemoria()
+                ,obtenerProcesador().obtenerMarca()
+                ,obtnerMemoria().obtenerCosto()
+                ,obtenerProcesador().obtenerCosto()
+                ,obtenerCostoComputadora());
+        return cadena;
     }
 }
