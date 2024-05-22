@@ -5,15 +5,29 @@
  */
 package paquete4;
 
+
+
 public class Ejecutor {
 
     public static void main(String[] args) {
 
         // nombre del archivo
-        String nombreArchivo = "empresas2.txt";
+        String nombreArchivo = "empresas1.txt";
         
         Empresa c1 = new Empresa("Textiles del Ecuador", "Quito");
-        
+       ArchivoEscritura archivo = new ArchivoEscritura(nombreArchivo);
+         Empresa[] lista = {c1};
+
+        for (int i = 0; i < lista.length; i++) {
+            // establecer el valor del atributo registro
+            archivo.establecerRegistro(lista[i]);
+            // establecer en el archivo el atributo del registro
+            archivo.establecerSalida();
+        }
+       
+        ArchivoLectura lectura = new ArchivoLectura(nombreArchivo);
+        lectura.establecerLista();
+        System.out.println(lectura);
         /*
         ArchivoEscritura escritura = new ArchivoEscritura(nombreArchivo);
         // establecer el valor del atributo registro

@@ -77,7 +77,7 @@ public class ArchivoLectura {
                 double nota = Double.parseDouble(linea_partes.
                         get(1).replace(",", "."));
                 String profesor = linea_partes.get(2);
-
+//mediante los bac eslh puedes tu poner un diferente sepador de el punto y coma
                 ArrayList<String> cadenaProfesor = new ArrayList<>(
                         Arrays.asList(profesor.split("\\|")));
                 // ["Tara Hernandez", "contratado"]
