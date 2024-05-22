@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -71,6 +71,11 @@ public class ArchivoLectura {
                         linea_partes.get(1) // contratado
                 );
                 lista.add(p);
+                
+               /*
+el archivo lecura extare todo y depues presenta en le to string
+
+                */
 
             } // fin de while
         }
@@ -101,3 +106,4 @@ public class ArchivoLectura {
         return cadena;
     }
 }
+
